@@ -4,7 +4,9 @@ const testCases = [
   "",         // Output: 0
   "1",        // Output: 1
   "1,5",      // Output: 6
-  "10,20,30"  // Output: 60
+  "10,20,30",  // Output: 60
+  "a",  // Output: 0
+  "a, 1"  // Output: 1
 ];
 
 testCases.forEach(testCase => {
