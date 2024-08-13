@@ -10,6 +10,7 @@ const testCases = [
   "1\n2,3",  // Output: 6
   "//;\n1;2",  // Output: 3
   "//[***]\n1***2***3", // Output: 6
+  "2,1001", // Output: 2
   "1,-2,-3", // Throws error "Negative numbers not allowed: -2, -3"
 ];
 

@@ -35,6 +35,7 @@ export class StringCalculator {
       .map(num => num.trim()) // Trim spaces around numbers
       .filter(num => num !== "") // Remove empty strings
       .map(num => parseInt(num, 10)) // Convert to numbers
+      .filter(num => num < 1000) // Ignore numbers greater than 1000
       .filter(num => !isNaN(num)); // Remove NaN values
 
     // Find negative numbers

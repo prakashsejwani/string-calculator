@@ -60,4 +60,10 @@ describe('StringCalculator', () => {
   test('should handle custom delimiter with multiple characters', () => {
     expect(StringCalculator.add("//[***]\n1***2***3")).toBe(6); // Custom delimiter "***"
   });
+
+  test('should ignore numbers greater than 1000', () => {
+    expect(StringCalculator.add("2,1001")).toBe(2); // 1001 is ignored
+    expect(StringCalculator.add("//[;]\n1001;2")).toBe(2); // 1001 is ignored
+    expect(StringCalculator.add("1\n1001\n2")).toBe(3); // 1001 is ignored
+  });
 });
