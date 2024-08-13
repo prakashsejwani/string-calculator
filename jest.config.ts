@@ -15,6 +15,9 @@ const config: Config = {
       isolatedModules: true,
     },
   },
+  moduleNameMapper: {
+    '^src/(.*)$': '<rootDir>/src/$1', // Maps 'src/' to the src directory
+  },
 };
 
 export default config;
