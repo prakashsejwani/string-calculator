@@ -13,7 +13,15 @@ export class StringCalculator {
       const delimiterLineEnd = numbers.indexOf('\n');
 
       // Extract the custom delimiter
-      delimiter = numbers.slice(2, delimiterLineEnd).trim();
+      const delimiterPart = numbers.slice(2, delimiterLineEnd).trim();
+
+      // Handle delimiters enclosed in brackets (e.g., [***])
+      if (delimiterPart.startsWith('[') && delimiterPart.endsWith(']')) {
+        delimiter = delimiterPart.slice(1, -1); // Remove the surrounding brackets
+      } else {
+        delimiter = delimiterPart;
+      }
+
       numbersPart = numbers.slice(delimiterLineEnd + 1);
     } else {
       // Default delimiters

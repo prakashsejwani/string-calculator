@@ -56,4 +56,8 @@ describe('StringCalculator', () => {
   test('should throw an error for negative numbers with custom delimiter', () => {
     expect(() => StringCalculator.add("//;\n1;-2;3")).toThrow('Negative numbers not allowed: -2');
   });
+
+  test('should handle custom delimiter with multiple characters', () => {
+    expect(StringCalculator.add("//[***]\n1***2***3")).toBe(6); // Custom delimiter "***"
+  });
 });
