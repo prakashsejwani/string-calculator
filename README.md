@@ -46,7 +46,7 @@ ESLint is configured to ensure code quality. You can lint the code with:
 `npm run lint`
 
 Testing with Jest
-Jest is used for testing. Write your tests in the src/__tests__ directory. To run the tests:
+Jest is used for testing. Write your tests in the test directory. To run the tests:
 
 
 `npm test`
