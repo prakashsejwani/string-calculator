@@ -6,7 +6,9 @@ const testCases = [
   "1,5",      // Output: 6
   "10,20,30",  // Output: 60
   "a",  // Output: 0
-  "1\n2,3"  // Output: 6
+  "1\n2,3",  // Output: 6
+  "//;\n1;2",  // Output: 3
+  "//;\n1;2;"  // Output: 6
 ];
 
 testCases.forEach(testCase => {

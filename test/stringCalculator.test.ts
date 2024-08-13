@@ -40,4 +40,8 @@ describe('StringCalculator', () => {
   test('should handle spaces around delimiters', () => {
     expect(StringCalculator.add("1, 2\n 3")).toBe(6); // Handles spaces around numbers
   });
+
+  test('should handle custom delimiter defined at the beginning', () => {
+    expect(StringCalculator.add("//;\n1;2")).toBe(3); // Custom delimiter ";"
+  });
 });
