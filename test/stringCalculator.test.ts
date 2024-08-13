@@ -24,4 +24,20 @@ describe('StringCalculator', () => {
   test('should handle mixed valid and invalid inputs', () => {
     expect(StringCalculator.add("1,2,invalid,3")).toBe(6); // Ignores invalid inputs
   });
+
+  test('should handle numbers separated by new lines', () => {
+    expect(StringCalculator.add("1\n2\n3")).toBe(6);
+  });
+
+  test('should handle mixed delimiters (commas and new lines)', () => {
+    expect(StringCalculator.add("1\n2,3")).toBe(6);
+  });
+
+  test('should handle numbers with extra commas or new lines', () => {
+    expect(StringCalculator.add("1\n\n2,,3")).toBe(6); // Handles extra new lines and commas
+  });
+
+  test('should handle spaces around delimiters', () => {
+    expect(StringCalculator.add("1, 2\n 3")).toBe(6); // Handles spaces around numbers
+  });
 });

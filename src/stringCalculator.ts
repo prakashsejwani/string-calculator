@@ -4,9 +4,9 @@ export class StringCalculator {
       return 0;
     }
 
-   // Split the input string by commas and filter out any empty strings
+    // Split the input string by commas and new lines and filter out any empty strings
     const numArray = numbers
-      .split(",")
+      .split(/[\n,]/) // Use a regular expression to split by either comma or new line
       .map(num => num.trim()) // Trim spaces around numbers
       .filter(num => num !== "") // Remove empty strings
       .map(num => parseInt(num, 10)) // Convert to numbers

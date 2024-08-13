@@ -6,7 +6,7 @@ const testCases = [
   "1,5",      // Output: 6
   "10,20,30",  // Output: 60
   "a",  // Output: 0
-  "a, 1"  // Output: 1
+  "1\n2,3"  // Output: 6
 ];
 
 testCases.forEach(testCase => {
