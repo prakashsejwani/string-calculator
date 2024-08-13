@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Compiled JavaScript files
+dist/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Jest coverage directory
+coverage/
+
+# ESLint cache
+.eslintcache
