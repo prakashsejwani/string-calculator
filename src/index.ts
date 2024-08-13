@@ -1,9 +1,12 @@
 import { StringCalculator } from './stringCalculator';
 
-const calculator = new StringCalculator();
+const testCases = [
+  "",         // Output: 0
+  "1",        // Output: 1
+  "1,5",      // Output: 6
+  "10,20,30"  // Output: 60
+];
 
-const resultWithEmptyString = calculator.add("");
-const resultWithSingleNumberString = calculator.add("1, 5");
-
-console.log(`Addition Result: ${resultWithEmptyString}`);  // Addition Result: 0
-console.log(`Addition Result: ${resultWithSingleNumberString}`);  // Addition Result: 1
+testCases.forEach(testCase => {
+  console.log(`Input: "${testCase}", Output: ${StringCalculator.add(testCase)}`);
+});
